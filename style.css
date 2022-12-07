@@ -1,0 +1,136 @@
+*{
+    
+}
+
+
+body{
+
+}
+
+/* border radius to change the shape  */
+
+.container{
+    
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    background:rgb(89, 0, 255);
+
+    height: 80vh; 
+    width: 80%;
+    margin: auto;
+
+
+    position: relative;
+   
+
+}
+
+.parent{
+background: black;
+color: white;
+height: 400px;
+width: 400px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+border-radius: 10%;
+
+animation: spin 3s infinite;
+
+
+
+
+
+}
+
+.ball{
+
+    background: radial-gradient(white,red);
+    width: 70px;
+    height: 70px;
+
+    /* border radius converts the ball to circle */
+    border-radius: 20%;
+
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+
+    animation: circle 3s infinite ease-in-out;
+
+
+
+}
+
+
+/* how to animate */
+/* use this circle naming into animation into the ball class  */
+@keyframes circle {
+
+
+    /* this percent is of time 3 seconds where we want to show the ball  */
+0%{
+    top: 50px;
+    left: 50px;
+    border-radius: 50%;
+    
+}
+
+25%{
+    top: 50px;
+    left: 70vw;
+    border-radius:  50% 0 50% 50%;
+
+}
+
+50%{
+    top: 70vh;
+    left: 70vw;
+    background: gold;
+    border-radius:  50% 50% 0 50%;
+
+
+}
+
+75%{
+    top: 70vh;
+    left: 50px;
+    border-radius:  50% 50% 50% 0;
+    background:greenyellow;
+
+
+}
+
+
+    100%{
+        top: 50px;
+        left: 50px;
+        border-radius:  0 50% 50% 50% ;
+        background: purple;
+
+
+
+    }
+}
+
+
+
+
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+
+    }
+
+    100%{
+        transform: rotate(360deg);
+        
+    }
+    
+}
